@@ -1,0 +1,17 @@
+:root {
+  --nav-height-L: 64px;
+  --nav-height-S: 56px;
+  --nav-media: 600px;
+}
+
+#deckgl-wrapper {
+  margin-top: var(--nav-height-L);
+  max-height: calc(100vh - var(--nav-height-L));
+}
+
+@media (max-width: 600px) {
+  #deckgl-wrapper {
+    margin-top: var(--nav-height-S);
+    max-height: calc(100vh - var(--nav-height-S));
+  }
+}
