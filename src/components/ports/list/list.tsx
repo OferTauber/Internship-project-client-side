@@ -43,7 +43,7 @@ export default function List({
     } else {
       setFilterdShallowPorts(shallowPorts);
     }
-  });
+  }, [searchBarValue, shallowPorts]);
 
   const handleRowClick: GridEventListener<'rowClick'> = (params) => {
     setDrawerPortId(params.row.id);

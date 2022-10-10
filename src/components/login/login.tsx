@@ -10,7 +10,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './login.css';
 import EmailValidator from 'email-validator';
-import { getAuthToken } from '../../utils/axios';
+import { getAuthToken, getHellow } from '../../utils/axios';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 
@@ -31,6 +31,7 @@ export default function Login() {
       event.preventDefault();
       if (!EmailValidator.validate(email)) return;
 
+      await getHellow();
       const token = await getAuthToken(email, password);
       Cookies.set('dockteck_token', token, { expires: 2 });
       navigate('/ports');

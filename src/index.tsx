@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
 import './style/colors.css';
@@ -7,9 +6,7 @@ import Ports from './components/ports/ports';
 import 'normalize.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/login/login';
-import TempApp from './components/tempApp/tempApp';
 import ProtectedRoute from './components/protected_route/protectedRoute';
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -30,14 +27,7 @@ root.render(
         }
       />
       <Route path="/login" element={<Login />} />
-      <Route
-        path="/temp"
-        element={
-          <ProtectedRoute>
-            <TempApp />
-          </ProtectedRoute>
-        }
-      />
+
       <Route
         path="/ports"
         element={

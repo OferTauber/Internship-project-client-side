@@ -8,7 +8,7 @@ import {
   convertTypeAnyToSecondOrderPort,
 } from './convertors';
 
-const URL = process.env.REACT_APP_URL;
+const URL: string = process.env.REACT_APP_URL + '';
 
 export async function getAuthToken(
   email: string,
@@ -28,11 +28,9 @@ export async function logout(token: string) {
   });
 }
 
-export async function getHellow(token: string) {
+export async function getHellow() {
   try {
-    const hellow: any = await axios.get(URL + '/test', {
-      headers: { authorization: 'Bearer ' + token },
-    });
+    const hellow: any = await axios.get(URL);
     console.log(hellow.data);
   } catch (e) {
     console.warn(e);
