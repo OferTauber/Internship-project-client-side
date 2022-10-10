@@ -7,7 +7,7 @@ import { INITIAL_VIEW_STATE__GLOBAL } from '../ports';
 import IconClusterLayer from './icon-cluster-layer';
 import iconMapping from './icons_sprites/location-icon-mapping';
 
-const mapboxAccessToken = process.env.REACT_APP_MAP_BOX_TOKEN;
+const mapboxAccessToken = "pk.eyJ1Ijoib2Zlci10YXViZXIiLCJhIjoiY2w5MnJtNHZ3MWgwMjNvbXRlNW8zNWtpOCJ9.KCjdt6mi8jt5Cvzb0KzqiA";
 
 const MAP_VIEW = new MapView({ repeat: true });
 
